@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-
+import "./home.css";
 
 export const Home = () => {
   const [sexo, setSexo] = useState("");
