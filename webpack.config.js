@@ -13,6 +13,7 @@ let publicUrl = `http://localhost:${port}`;
 //   const [schema, host] = process.env.GITPOD_WORKSPACE_URL.split('://');
 //   publicUrl = `${port}-${host}`;
 //  }
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -77,5 +78,10 @@ module.exports = {
     new PrettierPlugin({
         failSilently: true
     }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env': JSON.stringify({}) // evita error si alguien accede a `process.env`
+    }),
+    
   ]
 };
