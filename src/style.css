@@ -1,2 +1,66 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+:host {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: #f0f0eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #333;
+  }
+  
+  .calculator-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #567c6f;
+    text-align: center;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #7fa197;
+  }
+  
+  .input-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .button {
+    background-color: #7fa197;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #567c6f;
+  }
+  
+  .result {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
