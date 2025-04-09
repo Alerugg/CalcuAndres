@@ -9,10 +9,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const port = 3000;
 let publicUrl = `http://localhost:${port}`;
-if(process.env.GITPOD_WORKSPACE_URL){
-  const [schema, host] = process.env.GITPOD_WORKSPACE_URL.split('://');
-  publicUrl = `${port}-${host}`;
-}
+// if(process.env.GITPOD_WORKSPACE_URL){
+//   const [schema, host] = process.env.GITPOD_WORKSPACE_URL.split('://');
+//   publicUrl = `${port}-${host}`;
+//  }
 
 module.exports = {
   mode: 'development',
@@ -59,9 +59,9 @@ module.exports = {
   },
   plugins: [
     new WebpackErrorReporting({
-      hookURL: process.env.BC_ERROR_HOOK,
-      username: process.env.BC_STUDENT_EMAIL,
-      token: process.env.BC_ASSETS_TOKEN,
+      hookURL: "",
+      username: "",
+      token: "",
       compiler: "webpack",
       language: "html,css,javascript",
       framework: "vanillajs"
